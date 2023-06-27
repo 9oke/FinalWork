@@ -32,5 +32,17 @@ string[] FilterArray(string[] inputArray)
             resultLength++;
         }
     }
+    
+    string[] resultArray = new string[resultLength];
+    int index = 0;
+    for (int i = 0; i < inputArray.Length; i++)
+    {
+        if (inputArray[i].Length <= 3)
+        {
+            resultArray[index] = inputArray[i];
+            index++;
+        }
+    }
+    return resultArray;
 }
 
