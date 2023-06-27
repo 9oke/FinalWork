@@ -11,5 +11,26 @@ void MessageToTheUser()
     Console.WriteLine("Введите элементы массива через пробел:");
     string input = Console.ReadLine();
     string[] inputArray = input.Split(' ');
+
+    string[] resultArray = FilterArray(inputArray);
+
+    Console.WriteLine("Результат:");
+    foreach (string item in resultArray)
+    {
+        Console.WriteLine(item);
+    }
+    Console.ReadLine();
+}
+
+string[] FilterArray(string[] inputArray)
+{
+    int resultLength = 0;
+    for (int i = 0; i < inputArray.Length; i++)
+    {
+        if (inputArray[i].Length <= 3)
+        {
+            resultLength++;
+        }
+    }
 }
 
